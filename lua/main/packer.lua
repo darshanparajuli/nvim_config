@@ -48,5 +48,6 @@ return require('packer').startup(function(use)
 
   use('scrooloose/nerdtree', { on = 'NERDTreeToggle' })
   use('numToStr/Comment.nvim')
+  use('breuckelen/vim-resize')
 end)
 
