@@ -1,0 +1,4 @@
+{
+  "rust-analyzer.updates.prompt": false,
+  "rust-analyzer.updates.checkOnStartup": false
+}
