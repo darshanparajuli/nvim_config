@@ -27,6 +27,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
+vim.opt.timeoutlen = 250
 
 -- vim.opt.colorcolumn = "80"
 vim.opt.splitbelow = true
@@ -40,3 +41,4 @@ vim.opt.listchars = {
   trail = '·',
   nbsp = '␣',
 }
+vim.opt.pumheight = 10

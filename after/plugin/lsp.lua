@@ -1,4 +1,5 @@
 local lsp = require('lsp-zero')
+local luasnip = require('luasnip')
 
 lsp.preset('recommended')
 
