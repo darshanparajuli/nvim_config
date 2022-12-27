@@ -40,14 +40,14 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-vim.keymap.set("n", "H", "0")
-vim.keymap.set("n", "L", "$")
+vim.keymap.set("n", "H", "^")
+vim.keymap.set("n", "L", "g_")
 -- vim.keymap.set("n", "J", "10j")
 -- vim.keymap.set("n", "K", "10k")
 -- vim.keymap.set("n", "<leader>m", vim.cmd.Man)
 
-vim.keymap.set("v", "L", "$")
-vim.keymap.set("v", "H", "0")
+vim.keymap.set("v", "H", "^")
+vim.keymap.set("v", "L", "g_")
 vim.keymap.set("v", "J", "10j")
 vim.keymap.set("v", "K", "10k")
 
