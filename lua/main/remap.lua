@@ -39,9 +39,8 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 vim.keymap.set("n", "H", "^")
 vim.keymap.set("n", "L", "g_")
--- vim.keymap.set("n", "J", "10j")
--- vim.keymap.set("n", "K", "10k")
--- vim.keymap.set("n", "<leader>m", vim.cmd.Man)
+vim.keymap.set("n", "J", "10j")
+vim.keymap.set("n", "K", "10k")
 
 vim.keymap.set("v", "H", "^")
 vim.keymap.set("v", "L", "g_")
@@ -58,4 +57,6 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
 
 vim.keymap.set('n', '<C-n>', vim.cmd.bnext)
 vim.keymap.set('n', '<C-p>', vim.cmd.bprev)
+
+vim.keymap.set("n", "<leader>K", vim.cmd.Man)
 
