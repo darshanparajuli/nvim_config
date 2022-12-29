@@ -10,13 +10,6 @@ return require('packer').startup(function(use)
   }
 
   use('navarasu/onedark.nvim')
-  -- use({
-  --   'joshdick/onedark.vim',
-  --   as = 'onedark',
-  --   config = function()
-  --     vim.cmd('colorscheme onedark')
-  --   end
-  -- })
   use('nvim-lualine/lualine.nvim')
 
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
