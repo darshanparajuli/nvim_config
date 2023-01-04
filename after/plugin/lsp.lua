@@ -4,7 +4,7 @@ local luasnip = require('luasnip')
 lsp.preset('recommended')
 
 lsp.ensure_installed({
-  'rust_analyzer', 'kotlin_language_server', 'clangd',
+  'rust_analyzer', 'clangd',
 })
 
 local cmp = require('cmp')
