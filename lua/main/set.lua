@@ -51,6 +51,6 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 })
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*.rs" },
-  command = [[lua vim.lsp.buf.formatting_sync()]],
+  command = [[lua vim.lsp.buf.format()]],
 })
 
