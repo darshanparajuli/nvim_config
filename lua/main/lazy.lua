@@ -45,7 +45,7 @@ return require('lazy').setup({
       {'L3MON4D3/LuaSnip'},
       {'rafamadriz/friendly-snippets'},
 
-      {'j-hui/fidget.nvim'},
+      {'j-hui/fidget.nvim', tag = 'legacy'},
     }
   },
   'numToStr/Comment.nvim',
