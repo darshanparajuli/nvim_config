@@ -54,3 +54,8 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   command = [[lua vim.lsp.buf.format()]],
 })
 
+vim.diagnostic.config {
+  virtual_text = false,
+  signs = true,
+  underline = false,
+}
