@@ -14,6 +14,9 @@ require('mason-lspconfig').setup({
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 cmp.setup({
+  completion = {
+    autocomplete = false
+  },
   window = {
     -- completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
