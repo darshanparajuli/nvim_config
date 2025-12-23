@@ -51,5 +51,6 @@ return require('lazy').setup({
   'numToStr/Comment.nvim',
   'breuckelen/vim-resize',
   'nvim-tree/nvim-tree.lua',
+  'unblevable/quick-scope',
 })
 
