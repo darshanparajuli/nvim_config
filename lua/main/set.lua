@@ -46,10 +46,6 @@ vim.opt.listchars = {
 vim.opt.pumheight = 10
 
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-  pattern = { "*" },
-  command = [[%s/\s\+$//e]],
-})
-vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*.rs" },
   command = [[lua vim.lsp.buf.format()]],
 })

@@ -57,4 +57,7 @@ vim.keymap.set('n', '<C-n>', vim.cmd.bnext)
 vim.keymap.set('n', '<C-p>', vim.cmd.bprev)
 
 vim.keymap.set("n", "<leader>K", vim.cmd.Man)
+vim.keymap.set("n", "<leader>t", function()
+  vim.cmd("%s/\\s\\+$//e")
+end)
 
