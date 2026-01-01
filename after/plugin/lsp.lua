@@ -48,7 +48,10 @@ cmp.setup({
         fallback()
       end
     end, { 'i', 's' }),
-  })
+  }),
+  experimental = {
+    ghost_text = true,
+  },
 })
 lsp.set_preferences({
   suggest_lsp_servers = false,
