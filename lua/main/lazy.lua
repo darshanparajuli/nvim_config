@@ -21,7 +21,11 @@ return require('lazy').setup({
 
   'ibhagwan/fzf-lua',
 
-  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+  { 
+    'nvim-treesitter/nvim-treesitter', 
+    lazy = false, 
+    build = ':TSUpdate' 
+  },
   'mbbill/undotree',
   'tpope/vim-fugitive',
 
