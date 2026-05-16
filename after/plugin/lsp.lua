@@ -53,10 +53,10 @@ cmp.setup({
 })
 
 lsp.set_sign_icons({
-  error = 'E',
-  warn = 'W',
-  hint = 'H',
-  info = 'I'
+  error = '✘',
+  warn = '▲',
+  hint = '⚑',
+  info = ''
 })
 
 lsp.extend_lspconfig({
