@@ -6,14 +6,36 @@ require('blink.cmp').setup({
     ['<C-p>'] = { 'select_prev', 'fallback' },
     ['<Tab>'] = { 'select_next', 'accept', 'fallback' },
     ['<CR>'] = { 'accept', 'fallback' },
+    ["<C-up>"] = { "scroll_documentation_up", "fallback" },
+    ["<C-down>"] = { "scroll_documentation_down", "fallback" },
   },
   completion = {
-    menu = { auto_show = false },
-    ghost_text = { enabled = true },
-    documentation = { auto_show = false },
+    menu = {
+      auto_show = false,
+    },
+    ghost_text = {
+      enabled = true,
+    },
+    documentation = {
+      auto_show = false,
+    },
+    keyword = {
+      range = 'prefix',
+    },
+    trigger = {
+      show_on_blocked_trigger_characters = { ' ', '\n', '\t', '.' },
+    },
   },
   cmdline = {
-    completion = { menu = { auto_show = false } }
+    enabled = true,
+    completion = {
+      menu = {
+        auto_show = false
+      },
+    },
+    keymap = {
+      ['<CR>'] = { 'accept', 'fallback' },
+    },
   },
 })
 
