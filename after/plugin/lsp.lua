@@ -1,59 +1,10 @@
 local lsp = require('lsp-zero')
-local luasnip = require('luasnip')
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = { 'rust_analyzer', 'clangd', 'zls', 'lua_ls' },
   handlers = {
     lsp.default_setup,
-  },
-})
-
-local cmp = require('cmp')
-local cmp_select = { behavior = cmp.SelectBehavior.Select }
-cmp.setup({
-  completion = {
-    autocomplete = false
-  },
-  window = {
-    -- completion = cmp.config.window.bordered(),
-    -- documentation = cmp.config.window.bordered(),
-  },
-  mapping = cmp.mapping.preset.insert({
-    ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-    ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-    ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-    ['<C-space>'] = cmp.mapping.complete(),
-    ['<CR>'] = cmp.mapping.confirm {
-      behavior = cmp.ConfirmBehavior.Replace,
-      select = true,
-    },
-    ['<Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      elseif luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
-      else
-        fallback()
-      end
-    end, { 'i', 's' }),
-    ['<S-Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      elseif luasnip.jumpable(-1) then
-        luasnip.jump(-1)
-      else
-        fallback()
-      end
-    end, { 'i', 's' }),
-  }),
-  sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-  }, {
-    { name = 'buffer' },
-  }),
-  experimental = {
-    ghost_text = true,
   },
 })
 
