@@ -2,8 +2,8 @@ require('blink.cmp').setup({
   keymap = {
     preset = 'none',
     ['<C-Space>'] = { 'show', 'show_documentation', 'hide_documentation' },
-    ['<C-n>'] = { 'select_next', 'fallback' },
-    ['<C-p>'] = { 'select_prev', 'fallback' },
+    ['<C-n>'] = { 'show', 'select_next', 'fallback' },
+    ['<C-p>'] = { 'show', 'select_prev', 'fallback' },
     ['<Tab>'] = { 'select_next', 'accept', 'fallback' },
     ['<CR>'] = { 'accept', 'fallback' },
     ["<C-up>"] = { "scroll_documentation_up", "fallback" },
@@ -34,6 +34,9 @@ require('blink.cmp').setup({
       },
     },
     keymap = {
+      preset = 'none',
+      ['<C-n>'] = { 'show', 'select_next', 'fallback' },
+      ['<C-p>'] = { 'show', 'select_prev', 'fallback' },
       ['<CR>'] = { 'accept', 'fallback' },
     },
   },
